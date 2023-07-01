@@ -1,6 +1,6 @@
 # Windmill React UI & Tailwind CSS V3
 
-__The component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.__
+__The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.__
 
 *Original Project Tailwind CSS V2 [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
 Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)*
@@ -17,17 +17,22 @@ Be the most accessible it can be out of the box and the fastest way to productio
 
 ![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
 
-## 🚀 Usage
+## Installation
 
-Install
+Install via npm
 
 ```sh
 npm i -D @narimanb/windmill-react-ui-tailwindcss-3
 ```
 
-Inside `tailwind.config.js`
+## Configuration
+
+> Inside `tailwind.config.js`
 
 ```js
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+
 const windmill = require('@narimanb/windmill-react-ui-tailwindcss-3/config');
 module.exports = windmill({
 	content: [],
@@ -48,10 +53,11 @@ import App from './App';
 import { Windmill } from '@narimanb/windmill-react-ui-tailwindcss-3';
 
 ReactDOM.render(
-	<Windmill>
-		<App />
-	</Windmill>,
-	document.getElementById('root')
+    <Windmill>
+       <App />
+    </Windmill>,
+
+    document.getElementById('root')
 );
 ```
 
@@ -61,7 +67,7 @@ Use components inside your project
 import { Button } from '@narimanb/windmill-react-ui-tailwindcss-3';
 
 function App() {
-	return <Button>Hi there!</Button>;
+   return <Button>Hi there!</Button>;
 }
 
 export default App;
