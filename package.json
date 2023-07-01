@@ -1,6 +1,6 @@
 {
 	"name": "@narimanb/windmill-react-ui-tailwindcss-3",
-	"version": "1.0.0",
+	"version": "3.0.0",
 	"description": "React UI component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.",
 	"main": "dist/index.js",
 	"files": [
