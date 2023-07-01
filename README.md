@@ -27,23 +27,26 @@ npm i -D @narimanb/windmill-react-ui-tailwindcss-3
 
 ## Configuration
 
-> Inside `tailwind.config.js`
+> Add `windmill` in your `tailwind.config.js` file.
 
 ```js
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 
 const windmill = require('@narimanb/windmill-react-ui-tailwindcss-3/config');
+
 module.exports = windmill({
-	content: [],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 });
 ```
 
-Then place `Windmill` at the root of your project (the order doesn't matter, as long as your application is inside).
+## Usage
+
+Place `Windmill` at the root of your project (the order doesn't matter, as long as your application is inside).
 
 ```js
 // index.js
