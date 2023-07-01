@@ -1,9 +1,11 @@
 # Windmill React UI & Tailwind CSS V3
 
-The component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.
+__The component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.__
 
-Original Project [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
-Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)
+*Original Project Tailwind CSS V2 [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
+Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)*
+
+![dashboard](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/235e7f89-0d7d-4261-a746-9deb85b6f166)
 
 ## Mission
 
