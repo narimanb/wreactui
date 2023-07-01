@@ -1,0 +1,41 @@
+{
+	"root": true,
+	"env": {
+		"jest/globals": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:storybook/recommended",
+		"plugin:import/errors",
+		"plugin:import/typescript"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "jest"],
+	"rules": {
+		"no-unused-vars": [
+			2,
+			{
+				"args": "all",
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"no-warning-comments": 0,
+		"no-underscore-dangle": 0,
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "always",
+				"jsx": "always"
+			}
+		]
+	}
+}
