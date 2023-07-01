@@ -13,6 +13,10 @@ Be the most accessible it can be out of the box and the fastest way to productio
 
 [Go to docs to see complete, live examples](https://windmillui.com/react-ui)
 
+## Example dark/light theme
+
+![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
+
 ## 🚀 Usage
 
 Install
