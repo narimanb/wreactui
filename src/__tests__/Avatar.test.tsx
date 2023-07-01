@@ -1,68 +1,60 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import React, { createRef } from 'react';
+import { render, screen, within } from '@testing-library/react';
 import Avatar from '../Avatar';
 
-describe('Avatar', () => {
-	it('should render without crashing', () => {
-		render(<Avatar src="test" />);
-	});
+const avatar = () => screen.getByTestId('avatar');
+const img = () => within(avatar()).getByRole('img');
 
-	it('should render with base styles', () => {
-		const expected = 'relative rounded-full inline-block';
-		render(<Avatar role="avatar" src="test" />);
+test('should render without crashing', () => {
+	render(<Avatar src="#" data-testid="avatar" />);
 
-		expect(screen.getByRole('avatar').getAttribute('class')).toContain(
-			expected
-		);
-	});
+	expect(avatar()).toBeInTheDocument();
+});
 
-	it('should render with large styles', () => {
-		const expected = 'w-10 h-10';
-		render(<Avatar role="avatar" src="test" size="large" />);
+test('should render with base styles', () => {
+	const expectedClasses = 'relative rounded-full inline-block';
+	render(<Avatar src="#" data-testid="avatar" />);
 
-		expect(screen.getByRole('avatar').getAttribute('class')).toContain(
-			expected
-		);
-	});
+	expect(avatar()).toHaveClass(expectedClasses);
+});
 
-	it('should render with regular styles using prop', () => {
-		const expected = 'w-8 h-8';
-		render(<Avatar role="avatar" src="test" size="regular" />);
+test('should be able to access the <Avatar />', () => {
+	const avatarRef = createRef<HTMLDivElement>();
+	render(<Avatar ref={avatarRef} src="#" data-testid="avatar" />);
+	expect(avatar()).toEqual(avatarRef.current);
+});
 
-		expect(screen.getByRole('avatar').getAttribute('class')).toContain(
-			expected
-		);
-	});
+test('should render with large styles', () => {
+	const expectedClasses = 'w-10 h-10';
+	render(<Avatar src="#" size="large" data-testid="avatar" />);
 
-	it('should render with regular styles by default', () => {
-		const expected = 'w-8 h-8';
-		render(<Avatar role="avatar" src="test" />);
+	expect(avatar()).toHaveClass(expectedClasses);
+});
 
-		expect(screen.getByRole('avatar').getAttribute('class')).toContain(
-			expected
-		);
-	});
+test('should render with regular styles', () => {
+	const expectedClasses = 'w-8 h-8';
+	render(<Avatar src="#" size="regular" data-testid="avatar" />);
 
-	it('should render with small styles', () => {
-		const expected = 'w-6 h-6';
-		render(<Avatar role="avatar" src="test" size="small" />);
+	expect(avatar()).toHaveClass(expectedClasses);
+});
 
-		expect(screen.getByRole('avatar').getAttribute('class')).toContain(
-			expected
-		);
-	});
+test('should render with small styles', () => {
+	const expectedClasses = 'w-6 h-6';
+	render(<Avatar src="#" size="small" data-testid="avatar" />);
 
-	it('should contain an image with alt text', () => {
-		const expected = 'Lorem';
-		render(<Avatar src="test" alt="Lorem" />);
+	expect(avatar()).toHaveClass(expectedClasses);
+});
 
-		expect(screen.getByRole('img').getAttribute('alt')).toContain(expected);
-	});
+test('should contain an image with the correct src', () => {
+	const expectedSrc = '#';
+	render(<Avatar src="#" data-testid="avatar" />);
 
-	it('should contain an image with the correct src', () => {
-		const expected = 'test';
-		render(<Avatar src="test" alt="Lorem" />);
+	expect(img()).toHaveAttribute('src', expectedSrc);
+});
 
-		expect(screen.getByRole('img').getAttribute('src')).toContain(expected);
-	});
+test('should contain an image with alt text', () => {
+	const expectedAltText = 'Lorem';
+	render(<Avatar src="#" alt="Lorem" data-testid="avatar" />);
+
+	expect(img()).toHaveAccessibleName(expectedAltText);
 });
