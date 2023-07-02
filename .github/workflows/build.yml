@@ -21,12 +21,6 @@ jobs:
       - run: npm ci
       - run: npm run test:coverage
       - run: npm run build --if-present
-<<<<<<< HEAD
-=======
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_GITHUB}}
->>>>>>> 128433f4d94b96178badcb40b9702aa103bd5167
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         env:
