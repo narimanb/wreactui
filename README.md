@@ -2,6 +2,8 @@
 
 **The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.**
 
+[![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3)
+
 _Original Project Tailwind CSS V2 [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
 Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)_
 
