@@ -83,11 +83,23 @@ export default App;
 - [Transition](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Transition)
 - [Windmill](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Windmill)
 
-## Example dark & light theme
+## Examples
+
+dark & light theme
 
 ![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
 
+dashboard
+
 ![dashboard](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/235e7f89-0d7d-4261-a746-9deb85b6f166)
+
+## Development
+
+1. Install Node 18 or later. You can use the package manager of your choice.
+2. Clone this repository `git clone https://github.com/narimanb/windmill-react-ui-tailwindcss-3.git`.
+3. Run `npm ci` to install the dependencies.
+4. Run `npm run storybook`
+5. It will start a local server at `localhost:6006` with all components rendered.
 
 ## History
 
