@@ -1,14 +1,8 @@
-![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/ce664dac-e5c8-4862-8846-1e455ad7de3c)
+![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/888b81a4-0bb5-49d4-9a25-6720d553d720)
 
 The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.
 
 [![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3) [![Build](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml/badge.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/blob/main/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/graphs/commit-activity)
-
-![dashboard](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/235e7f89-0d7d-4261-a746-9deb85b6f166)
-
-## Example dark & light theme
-
-![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
 
 ## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/02864a9c-0b04-41a0-ae64-8795ee9a7279) Install
 
@@ -88,6 +82,12 @@ export default App;
 - [Textarea](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Textarea)
 - [Transition](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Transition)
 - [Windmill](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Windmill)
+
+## Example dark & light theme
+
+![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
+
+![dashboard](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/235e7f89-0d7d-4261-a746-9deb85b6f166)
 
 ## History
 
