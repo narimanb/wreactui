@@ -9,7 +9,13 @@ The React component library based on Tailwind CSS V3 for fast and accessible dev
 Install via npm
 
 ```sh
-npm i -D @narimanb/windmill-react-ui-tailwindcss-3
+npm i -D @narimanb/wreactui
+```
+
+Install via yarn
+
+```sh
+yarn add -D @narimanb/wreactui
 ```
 
 ## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/b43f2be3-f0f3-48ea-afb6-1fe8080d7bd6) Configuration
@@ -20,7 +26,7 @@ npm i -D @narimanb/windmill-react-ui-tailwindcss-3
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 
-const windmill = require('@narimanb/windmill-react-ui-tailwindcss-3/config');
+const windmill = require('@narimanb/wreactui/config');
 
 module.exports = windmill({
 	content: ['./src/**/*.{html,js}'],
@@ -40,7 +46,7 @@ Place `Windmill` at the root of your project (the order doesn't matter, as long 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Windmill } from '@narimanb/windmill-react-ui-tailwindcss-3';
+import { Windmill } from '@narimanb/wreactui';
 
 ReactDOM.render(
 	<Windmill>
@@ -54,7 +60,7 @@ ReactDOM.render(
 Use components inside your project
 
 ```js
-import { Button } from '@narimanb/windmill-react-ui-tailwindcss-3';
+import { Button } from '@narimanb/wreactui';
 
 function App() {
 	return <Button>Hi there!</Button>;

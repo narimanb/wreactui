@@ -154,8 +154,8 @@ const maxHeight = (theme) => ({
 const windmillConfig = {
 	darkMode: 'class',
 	content: [
-		'node_modules/@narimanb/windmill-react-ui-tailwindcss-3/lib/defaultTheme.js',
-		'node_modules/@narimanb/windmill-react-ui-tailwindcss-3/dist/index.js',
+		'node_modules/@narimanb/wreactui/lib/defaultTheme.js',
+		'node_modules/@narimanb/wreactui/dist/index.js',
 	],
 	theme: {
 		colors,

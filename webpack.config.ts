@@ -9,7 +9,7 @@ module.exports = {
 		// the filename template for entry chunks
 		filename: 'index.js',
 		// the name of the exported library
-		library: '@narimanb/windmill-react-ui-tailwindcss-3',
+		library: '@narimanb/wreactui',
 		// the name of the exported library
 		libraryTarget: 'umd', // universal module definition
 	},
