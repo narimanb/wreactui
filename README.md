@@ -2,10 +2,7 @@
 
 **The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.**
 
-[![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3) [![Build](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml/badge.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/blob/main/LICENSE)
-
-_Original Project Tailwind CSS V2 [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
-Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)_
+[![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3) [![Build](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml/badge.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/blob/main/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/graphs/commit-activity)
 
 ![dashboard](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/235e7f89-0d7d-4261-a746-9deb85b6f166)
 
@@ -91,3 +88,8 @@ export default App;
 - [Textarea](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Textarea)
 - [Transition](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Transition)
 - [Windmill](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Windmill)
+
+## History
+
+_Original Project Tailwind CSS V2 [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
+Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)_
