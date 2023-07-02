@@ -7,11 +7,6 @@ Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/wi
 
 ![dashboard](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/235e7f89-0d7d-4261-a746-9deb85b6f166)
 
-## Mission
-
-Be the most accessible it can be out of the box and the fastest way to production.
-
-[Go to docs to see complete, live examples](https://windmillui.com/react-ui)
 
 ## Example dark & light theme
 
