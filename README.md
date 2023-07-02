@@ -2,7 +2,7 @@
 
 **The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.**
 
-[![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3) [![Build](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml/badge.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3) [![Build](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml/badge.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/blob/main/LICENSE)
 
 _Original Project Tailwind CSS V2 [Windmill React UI](https://github.com/estevanmaito/windmill-react-ui)
 Projects using it: [Windmill Dashboard React](https://github.com/estevanmaito/windmill-dashboard-react)_
