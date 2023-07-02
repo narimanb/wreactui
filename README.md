@@ -1,6 +1,6 @@
-# Windmill React UI & Tailwind CSS V3
+![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/ce664dac-e5c8-4862-8846-1e455ad7de3c)
 
-**The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.**
+The React component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.
 
 [![codecov](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3/branch/main/graph/badge.svg?token=O0NG9J08NK)](https://codecov.io/gh/narimanb/windmill-react-ui-tailwindcss-3) [![Build](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml/badge.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/actions/workflows/build.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/blob/main/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/graphs/commit-activity)
 
@@ -10,7 +10,7 @@
 
 ![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
 
-## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/02864a9c-0b04-41a0-ae64-8795ee9a7279) Installation
+## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/02864a9c-0b04-41a0-ae64-8795ee9a7279) Install
 
 Install via npm
 
@@ -69,7 +69,7 @@ function App() {
 export default App;
 ```
 
-## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/d93cfcb4-b403-415a-803a-7e8e2436dc14) Wiki
+## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/d93cfcb4-b403-415a-803a-7e8e2436dc14) Documentation
 
 - [Alert](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Alert)
 - [Avatar](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Avatar)
