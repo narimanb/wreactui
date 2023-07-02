@@ -13,11 +13,12 @@ Be the most accessible it can be out of the box and the fastest way to productio
 
 [Go to docs to see complete, live examples](https://windmillui.com/react-ui)
 
-## Example dark/light theme
+## Example dark & light theme
 
 ![controls-animate](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/9efa19be-1bcb-4d3e-a866-e8230ed8ce63)
 
-## Installation
+
+## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/02864a9c-0b04-41a0-ae64-8795ee9a7279)  Installation
 
 Install via npm
 
@@ -25,7 +26,7 @@ Install via npm
 npm i -D @narimanb/windmill-react-ui-tailwindcss-3
 ```
 
-## Configuration
+## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/b43f2be3-f0f3-48ea-afb6-1fe8080d7bd6)  Configuration
 
 > Add `windmill` in your `tailwind.config.js` file.
 
@@ -44,7 +45,8 @@ module.exports = windmill({
 });
 ```
 
-## Usage
+
+## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/993d78dc-90cd-4838-9f1c-5d3f635db26d)  Usage
 
 Place `Windmill` at the root of your project (the order doesn't matter, as long as your application is inside).
 
@@ -75,12 +77,24 @@ function App() {
 
 export default App;
 ```
+## ![image](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/assets/37624015/d93cfcb4-b403-415a-803a-7e8e2436dc14)  Wiki
 
-## 🔌 Contributing
++ [Alert](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Alert)
++ [Avatar](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Avatar)
++ [Backdrop](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Backdrop)
++ [Badge](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Badge)
++ [Button](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Button)
++ [Card](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Card)
++ [Dropdown](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Dropdown)
++ [Helper Text](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Helper-Text)
++ [Input](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Input)
++ [Label](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Label)
++ [Modal](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Modal)
++ [Pagination](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Pagination)
++ [Select](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Select)
++ [Table](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Table)
++ [Textarea](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Textarea)
++ [Transition](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Transition)
++ [Windmill](https://github.com/narimanb/windmill-react-ui-tailwindcss-3/wiki/Windmill)
 
-- Fork
-- Clone
-- `npm install`
-- `npm run storybook`
 
-It will start a local server at `localhost:6006` with all components rendered.
