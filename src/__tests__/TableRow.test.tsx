@@ -2,27 +2,47 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TableRow from '../TableRow';
 
-describe('TableRow', () => {
-	it('should render without crashing', () => {
-		render(
+const tableRow = () => screen.getByTestId('trow');
+
+test('should render without crashing', () => {
+	render(
+		<>
+			<table>
+				<tbody>
+					<TableRow data-testid="trow" />
+				</tbody>
+			</table>
+		</>
+	);
+
+	expect(tableRow()).toBeInTheDocument();
+});
+
+test('should render as tr element', () => {
+	render(
+		<>
 			<table>
 				<tbody>
 					<TableRow />
 				</tbody>
 			</table>
-		);
-	});
+		</>
+	);
 
-	it('should not have base styles', () => {
-		const expected = '';
-		render(
+	expect(screen.getByRole('row')).toBeInTheDocument();
+});
+
+test('should not have base styles', () => {
+	const expectedClasses = '';
+	render(
+		<>
 			<table>
 				<tbody>
-					<TableRow />
+					<TableRow data-testid="trow" />
 				</tbody>
 			</table>
-		);
+		</>
+	);
 
-		expect(screen.getByRole('row').getAttribute('class')).toBe(expected);
-	});
+	expect(tableRow().getAttribute('class')).toBe(expectedClasses);
 });

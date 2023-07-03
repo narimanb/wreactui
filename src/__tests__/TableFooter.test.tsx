@@ -1,19 +1,45 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TableFooter from '../TableFooter';
+import Pagination from '../Pagination';
+import Theme from '../themes/default';
 
-describe('TableFooter', () => {
-	it('should render without crashing', () => {
-		render(<TableFooter />);
-	});
+const tableFooter = () => screen.getByTestId('footer');
 
-	it('should render with base styles', () => {
-		const expected =
-			'px-4 py-3 border-t dark:border-gray-700 bg-gray-50 text-gray-500 dark:text-gray-400 dark:bg-gray-800';
-		render(<TableFooter role="footer" />);
+test('should render without crashing', () => {
+	render(<TableFooter data-testid="footer" />);
 
-		expect(screen.getByRole('footer').getAttribute('class')).toContain(
-			expected
-		);
-	});
+	expect(tableFooter()).toBeInTheDocument();
+});
+
+test('should render as tfoot element', () => {
+	render(<TableFooter data-testid="footer" />);
+
+	expect(screen.getByRole('rowgroup')).toBeInTheDocument();
+});
+
+test('should render with base styles', () => {
+	const expectedClasses = Theme.tableFooter.base;
+	render(<TableFooter data-testid="footer" />);
+
+	expect(tableFooter()).toHaveClass(expectedClasses);
+});
+
+test('should render with pagination', () => {
+	const expectedPaginationClasses = Theme.pagination.base;
+	render(
+		<>
+			<TableFooter data-testid="footer">
+				<Pagination
+					totalResults={10}
+					resultsPerPage={4}
+					// eslint-disable-next-line @typescript-eslint/no-empty-function
+					onChange={() => {}}
+					label="Table navigation"
+				/>
+			</TableFooter>
+		</>
+	);
+
+	expect(tableFooter().firstChild).toHaveClass(expectedPaginationClasses);
 });

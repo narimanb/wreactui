@@ -2,14 +2,16 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Table from '../Table';
 
-describe('Table', () => {
-	it('should render without crashing', () => {
-		render(<Table />);
-	});
+const table = () => screen.getByTestId('test');
 
-	it('should contain a table', () => {
-		render(<Table />);
+test('should render without crashing', () => {
+	render(<Table data-testid="test" />);
 
-		expect(screen.getByRole('table')).toBeTruthy();
-	});
+	expect(table()).toBeInTheDocument();
+});
+
+test('should contain a table', () => {
+	render(<Table />);
+
+	expect(screen.getByRole('table')).toBeInTheDocument();
 });

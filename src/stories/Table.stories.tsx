@@ -4,6 +4,8 @@ import Table, { TableProps } from '../Table';
 
 const meta: Meta<typeof Table> = {
 	component: Table,
+	title: 'Table/Table',
+	tags: ['autodocs'],
 };
 export default meta;
 

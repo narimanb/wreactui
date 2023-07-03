@@ -1,17 +1,19 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TableContainer from '../TableContainer';
-import theme from '../themes/default';
+import Theme from '../themes/default';
 
-describe('TableContainer', () => {
-	it('should render without crashing', () => {
-		render(<TableContainer />);
-	});
+const tableContainer = () => screen.getByTestId('test');
 
-	it('should render with base styles', () => {
-		const expected = theme.tableContainer.base;
-		render(<TableContainer role="table" />);
+test('should render without crashing', () => {
+	render(<TableContainer data-testid="test" />);
 
-		expect(screen.getByRole('table').getAttribute('class')).toContain(expected);
-	});
+	expect(tableContainer()).toBeInTheDocument();
+});
+
+test('should render with base styles', () => {
+	const expectedClasses = Theme.tableContainer.base;
+	render(<TableContainer data-testid="test" />);
+
+	expect(tableContainer()).toHaveClass(expectedClasses);
 });

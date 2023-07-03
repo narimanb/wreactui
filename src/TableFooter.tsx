@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { ThemeContext } from './context/ThemeContext';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TableFooterProps
+	extends React.HTMLAttributes<HTMLTableSectionElement> {}
 
-const TableFooter = React.forwardRef<HTMLDivElement, Props>(
+const TableFooter = React.forwardRef<HTMLTableSectionElement, TableFooterProps>(
 	function TableFooter(props, ref) {
 		const { className, children, ...other } = props;
 
@@ -17,9 +18,9 @@ const TableFooter = React.forwardRef<HTMLDivElement, Props>(
 		const cls = classNames(baseStyle, className);
 
 		return (
-			<div className={cls} ref={ref} {...other}>
+			<tfoot className={cls} ref={ref} {...other}>
 				{children}
-			</div>
+			</tfoot>
 		);
 	}
 );

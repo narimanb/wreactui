@@ -1,27 +1,25 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TableBody from '../TableBody';
+import Theme from '../themes/default';
 
-describe('TableBody', () => {
-	it('should render without crashing', () => {
-		render(
-			<table>
-				<TableBody />
-			</table>
-		);
-	});
+const tableBody = () => screen.getByTestId('tbody');
 
-	it('should render with base styles', () => {
-		const expected =
-			'bg-white divide-y dark:divide-gray-700 dark:bg-gray-800 text-gray-700 dark:text-gray-400';
-		render(
-			<table>
-				<TableBody />
-			</table>
-		);
+test('should render without crashing', () => {
+	render(<TableBody data-testid="tbody" />);
 
-		expect(screen.getByRole('rowgroup').getAttribute('class')).toContain(
-			expected
-		);
-	});
+	expect(tableBody()).toBeInTheDocument();
+});
+
+test('should render as tbody element', () => {
+	render(<TableBody data-testid="tbody" />);
+
+	expect(screen.getByRole('rowgroup')).toBeInTheDocument();
+});
+
+test('should render with base styles', () => {
+	const expectedClasses = Theme.tableBody.base;
+	render(<TableBody data-testid="tbody" />);
+
+	expect(tableBody()).toHaveClass(expectedClasses);
 });

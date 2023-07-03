@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { ThemeContext } from './context/ThemeContext';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TableContainerProps
+	extends React.HTMLAttributes<HTMLDivElement> {}
 
-const TableContainer = React.forwardRef<HTMLDivElement, Props>(
+const TableContainer = React.forwardRef<HTMLDivElement, TableContainerProps>(
 	function TableContainer(props, ref) {
 		const { className, children, ...other } = props;
 

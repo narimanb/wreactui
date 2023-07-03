@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { ThemeContext } from './context/ThemeContext';
 
-interface Props extends React.HTMLAttributes<HTMLTableSectionElement> {}
+export interface TableBodyProps
+	extends React.HTMLAttributes<HTMLTableSectionElement> {}
 
-const TableBody = React.forwardRef<HTMLTableSectionElement, Props>(
+const TableBody = React.forwardRef<HTMLTableSectionElement, TableBodyProps>(
 	function TableBody(props, ref) {
 		const { className, children, ...other } = props;
 

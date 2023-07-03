@@ -1,27 +1,25 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TableHeader from '../TableHeader';
+import Theme from '../themes/default';
 
-describe('TableHeader', () => {
-	it('should render without crashing', () => {
-		render(
-			<table>
-				<TableHeader />
-			</table>
-		);
-	});
+const tableHeader = () => screen.getByTestId('header');
 
-	it('should render with base styles', () => {
-		const expected =
-			'text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800';
-		render(
-			<table>
-				<TableHeader />
-			</table>
-		);
+test('should render without crashing', () => {
+	render(<TableHeader data-testid="header" />);
 
-		expect(screen.getByRole('rowgroup').getAttribute('class')).toContain(
-			expected
-		);
-	});
+	expect(tableHeader()).toBeInTheDocument();
+});
+
+test('should render as thead element', () => {
+	render(<TableHeader data-testid="header" />);
+
+	expect(screen.getByRole('rowgroup')).toBeInTheDocument();
+});
+
+test('should render with base styles', () => {
+	const expectedClasses = Theme.tableHeader.base;
+	render(<TableHeader data-testid="header" />);
+
+	expect(tableHeader()).toHaveClass(expectedClasses);
 });
