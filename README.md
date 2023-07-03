@@ -102,7 +102,7 @@ dashboard
 ## Development
 
 1. Install Node 18 or later. You can use the package manager of your choice.
-2. Clone this repository `git clone https://github.com/narimanb/windmill-react-ui-tailwindcss-3.git`.
+2. Clone this repository `git clone https://github.com/narimanb/wreactui.git`.
 3. Run `npm ci` to install the dependencies.
 4. Run `npm run storybook`
 5. It will start a local server at `localhost:6006` with all components rendered.
