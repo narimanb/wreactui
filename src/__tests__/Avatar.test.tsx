@@ -1,6 +1,7 @@
 import React, { createRef } from 'react';
 import { render, screen, within } from '@testing-library/react';
 import Avatar from '../Avatar';
+import Theme from '../themes/default';
 
 const avatar = () => screen.getByTestId('avatar');
 const img = () => within(avatar()).getByRole('img');
@@ -12,7 +13,7 @@ test('should render without crashing', () => {
 });
 
 test('should render with base styles', () => {
-	const expectedClasses = 'relative rounded-full inline-block';
+	const expectedClasses = Theme.avatar.base;
 	render(<Avatar src="#" data-testid="avatar" />);
 
 	expect(avatar()).toHaveClass(expectedClasses);
@@ -25,21 +26,21 @@ test('should be able to access the <Avatar />', () => {
 });
 
 test('should render with large styles', () => {
-	const expectedClasses = 'w-10 h-10';
+	const expectedClasses = Theme.avatar.size.large;
 	render(<Avatar src="#" size="large" data-testid="avatar" />);
 
 	expect(avatar()).toHaveClass(expectedClasses);
 });
 
 test('should render with regular styles', () => {
-	const expectedClasses = 'w-8 h-8';
+	const expectedClasses = Theme.avatar.size.regular;
 	render(<Avatar src="#" size="regular" data-testid="avatar" />);
 
 	expect(avatar()).toHaveClass(expectedClasses);
 });
 
 test('should render with small styles', () => {
-	const expectedClasses = 'w-6 h-6';
+	const expectedClasses = Theme.avatar.size.small;
 	render(<Avatar src="#" size="small" data-testid="avatar" />);
 
 	expect(avatar()).toHaveClass(expectedClasses);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Backdrop from '../Backdrop';
+import Theme from '../themes/default';
 
 const backdrop = () => screen.getByTestId('backdrop');
 
@@ -11,8 +12,7 @@ test('should render without crashing', () => {
 });
 
 test('should render with base styles', () => {
-	const expectedClasses =
-		'fixed inset-0 z-40 flex items-end bg-black/50 sm:items-center sm:justify-center';
+	const expectedClasses = Theme.backdrop.base;
 	render(<Backdrop data-testid="backdrop" />);
 
 	expect(backdrop()).toHaveClass(expectedClasses);

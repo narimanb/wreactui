@@ -1,47 +1,47 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Card from '../Card';
-import theme from '../themes/default';
+import Theme from '../themes/default';
 
-describe('Card', () => {
-	it('should render without crashing', () => {
-		render(<Card />);
-	});
+const card = () => screen.getByTestId('card');
 
-	it('should render with base styles', () => {
-		const expected = theme.card.base;
-		render(<Card role="card" />);
+test('should render without crashing', () => {
+	render(<Card data-testid="card" />);
 
-		expect(screen.getByRole('card').getAttribute('class')).toContain(expected);
-	});
+	expect(card()).toBeInTheDocument();
+});
 
-	it('should render with default styles', () => {
-		const expected = 'bg-white dark:bg-gray-800';
-		render(<Card role="card" />);
+test('should render with base styles', () => {
+	const expectedClasses = Theme.card.base;
+	render(<Card data-testid="card" />);
 
-		expect(screen.getByRole('card').getAttribute('class')).toContain(expected);
-	});
+	expect(card()).toHaveClass(expectedClasses);
+});
 
-	it('should render without default styles', () => {
-		const expected = 'bg-white dark:bg-gray-800';
-		render(<Card role="card" colored />);
+test('should render with default styles', () => {
+	const expectedClasses = Theme.card.default;
+	render(<Card data-testid="card" />);
 
-		expect(screen.getByRole('card').getAttribute('class')).not.toContain(
-			expected
-		);
-	});
+	expect(card()).toHaveClass(expectedClasses);
+});
 
-	it('should add classes to base styles', () => {
-		const expected =
-			'min-w-0 rounded-lg ring-1 ring-black/5 overflow-hidden bg-red-400';
-		render(<Card role="card" className="bg-red-400" colored />);
+test('should render without default styles', () => {
+	const expectedClasses = Theme.card.default;
+	render(<Card colored data-testid="card" />);
 
-		expect(screen.getByRole('card').getAttribute('class')).toBe(expected);
-	});
+	expect(card().getAttribute('class')).not.toContain(expectedClasses);
+});
 
-	it('should render children', () => {
-		render(<Card role="card">Lorem ipsum</Card>);
+test('should render children', () => {
+	const expectedText = 'Lorem ipsum';
+	render(<Card data-testid="card">Lorem ipsum</Card>);
 
-		expect(screen.getByRole('card')).toHaveTextContent('Lorem ipsum');
-	});
+	expect(card()).toHaveTextContent(expectedText);
+});
+
+test('should add classes to base styles', () => {
+	const expectedClasses = Theme.card.base + ' bg-red-400';
+	render(<Card className="bg-red-400" data-testid="card" />);
+
+	expect(card()).toHaveClass(expectedClasses);
 });
