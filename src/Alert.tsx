@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { SVGAttributes, useContext } from 'react';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { ThemeContext } from './context/ThemeContext';
+import SVGIcon from './interfaces/SVGIcon.interface';
 
-enum AlertEnum {
+export enum AlertEnum {
 	success,
 	danger,
 	warning,
@@ -22,7 +23,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 	onClose?: () => void;
 }
 
-type IconProps = SVGAttributes<SVGElement>;
+export type IconProps = SVGIcon;
 
 export const InfoIcon: React.FC<IconProps> = (props) => (
 	<svg
@@ -110,24 +111,33 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 	const iconTypeStyle = alert.icon[type];
 
 	let Icon;
+	let IconType: string; // 'data-icon' of SVG
+	const IconPrefix = 'alert'; // 'data-prefix' of SVG
+
 	switch (type) {
 		case 'success':
 			Icon = SuccessIcon;
+			IconType = 'success';
 			break;
 		case 'warning':
 			Icon = WarningIcon;
+			IconType = 'warning';
 			break;
 		case 'danger':
 			Icon = DangerIcon;
+			IconType = 'danger';
 			break;
 		case 'info':
 			Icon = InfoIcon;
+			IconType = 'info';
 			break;
 		case 'neutral':
 			Icon = NeutralIcon;
+			IconType = 'neutral';
 			break;
 		default:
 			Icon = NeutralIcon;
+			IconType = 'neutral';
 	}
 
 	const cls = classNames(
@@ -158,6 +168,9 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 						viewBox="0 0 20 20"
 						role="img"
 						aria-hidden="true"
+						// data
+						data-prefix={IconPrefix}
+						data-icon="close"
 					>
 						<path
 							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -167,7 +180,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 					</svg>
 				</button>
 			)}
-			<Icon className={iconCls} />
+			<Icon data-prefix={IconPrefix} data-icon={IconType} className={iconCls} />
 			{children}
 		</div>
 	);
