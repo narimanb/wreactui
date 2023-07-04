@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { ThemeContext } from './context/ThemeContext';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TableCellProps
 	extends React.TdHTMLAttributes<HTMLTableCellElement> {}
 

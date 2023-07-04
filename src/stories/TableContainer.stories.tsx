@@ -4,7 +4,7 @@ import TableContainer, { TableContainerProps } from '../TableContainer';
 
 const meta: Meta<typeof TableContainer> = {
 	component: TableContainer,
-	title: 'Table/TableContainer',
+	title: 'Components/Table/TableContainer',
 	tags: ['autodocs'],
 };
 export default meta;

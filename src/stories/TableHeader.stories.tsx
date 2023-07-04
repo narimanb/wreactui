@@ -4,7 +4,7 @@ import TableHeader, { TableHeaderProps } from '../TableHeader';
 
 const meta: Meta<typeof TableHeader> = {
 	component: TableHeader,
-	title: 'Table/TableHeader',
+	title: 'Components/Table/TableHeader',
 	tags: ['autodocs'],
 };
 export default meta;

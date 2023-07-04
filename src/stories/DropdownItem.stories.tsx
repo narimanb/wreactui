@@ -5,7 +5,7 @@ import { ButtonProps } from '../Button';
 
 const meta: Meta<typeof DropdownItem> = {
 	component: DropdownItem,
-	title: 'Dropdown/DropdownItem',
+	title: 'Components/Dropdown/DropdownItem',
 	tags: ['autodocs'],
 };
 export default meta;

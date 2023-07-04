@@ -6,6 +6,8 @@ import avatarImage from './static/avatar-1.jpg';
 
 const meta: Meta<typeof Avatar> = {
 	component: Avatar,
+	title: 'Components/Avatar',
+	tags: ['autodocs'],
 };
 export default meta;
 

@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/extensions
-import windmill from './config';
+import wreactui from './config';
 
-export default windmill({
+export default wreactui({
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		extend: {},

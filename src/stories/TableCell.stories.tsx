@@ -4,7 +4,7 @@ import TableCell, { TableCellProps } from '../TableCell';
 
 const meta: Meta<typeof TableCell> = {
 	component: TableCell,
-	title: 'Table/TableCell',
+	title: 'Components/Table/TableCell',
 	tags: ['autodocs'],
 };
 export default meta;

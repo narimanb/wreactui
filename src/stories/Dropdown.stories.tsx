@@ -4,7 +4,7 @@ import Dropdown, { DropdownProps } from '../Dropdown';
 
 const meta: Meta<typeof Dropdown> = {
 	component: Dropdown,
-	title: 'Dropdown/Dropdown',
+	title: 'Components/Dropdown/Dropdown',
 	tags: ['autodocs'],
 };
 export default meta;

@@ -5,15 +5,15 @@
  * @param {string} message - instructions about the warning
  */
 function warn(assert: boolean, scope: string, message: string) {
-  if (process.env.NODE_ENV !== 'production') {
-    if (assert) {
-      if (console.warn) {
-        console.warn(`Windmill [${scope}]: ${message}`)
-      } else {
-        console.log(`Windmill [${scope}]: ${message}`)
-      }
-    }
-  }
+	if (process.env.NODE_ENV !== 'production') {
+		if (assert) {
+			if (console.warn) {
+				console.warn(`Wreactui [${scope}]: ${message}`);
+			} else {
+				console.log(`Wreactui [${scope}]: ${message}`);
+			}
+		}
+	}
 }
 
-export default warn
+export default warn;

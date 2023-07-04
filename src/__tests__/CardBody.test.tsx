@@ -1,18 +1,19 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import CardBody from '../CardBody';
+import Theme from '../themes/default';
 
-describe('CardBody', () => {
-	it('should render without crashing', () => {
-		render(<CardBody />);
-	});
+const cardBody = () => screen.getByTestId('test');
 
-	it('should render with default styles', () => {
-		const expected = 'p-4';
-		render(<CardBody role="cardbody" />);
+test('should render without crashing', () => {
+	render(<CardBody data-testid="test" />);
 
-		expect(screen.getByRole('cardbody').getAttribute('class')).toContain(
-			expected
-		);
-	});
+	expect(cardBody()).toBeInTheDocument();
+});
+
+test('should render with base styles', () => {
+	const expectedClasses = Theme.cardBody.base;
+	render(<CardBody data-testid="test" />);
+
+	expect(cardBody()).toHaveClass(expectedClasses);
 });

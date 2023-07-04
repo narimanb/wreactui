@@ -151,7 +151,7 @@ const maxHeight = (theme) => ({
 	...theme('spacing'),
 });
 
-const windmillConfig = {
+const wreactuiConfig = {
 	darkMode: 'class',
 	content: [
 		'node_modules/@narimanb/wreactui/lib/defaultTheme.js',
@@ -173,13 +173,13 @@ function arrayMergeFn(destinationArray, sourceArray) {
 }
 
 /**
- * Merge Windmill and Tailwind CSS configurations
+ * Merge Wreactui and Tailwind CSS configurations
  * @param {object} tailwindConfig - Tailwind config object
  * @return {object} new config object
  */
 function wrapper(tailwindConfig) {
 	const content = tailwindConfig.content;
-	return deepMerge({ ...tailwindConfig, content }, windmillConfig, {
+	return deepMerge({ ...tailwindConfig, content }, wreactuiConfig, {
 		arrayMerge: arrayMergeFn,
 	});
 }

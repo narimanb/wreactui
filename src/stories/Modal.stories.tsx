@@ -4,6 +4,8 @@ import Modal, { ModalProps } from '../Modal';
 
 const meta: Meta<typeof Modal> = {
 	component: Modal,
+	title: 'Components/Modal/Modal',
+	tags: ['autodocs'],
 };
 export default meta;
 
@@ -15,7 +17,4 @@ export const Template: Story = {
 
 export const Basic = {
 	...Template,
-	parameters: {
-		children: 'Basic label',
-	},
 };

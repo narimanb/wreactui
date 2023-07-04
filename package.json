@@ -16,7 +16,7 @@
 		"build:lib": "babel src/themes/default.ts --out-file lib/defaultTheme.js",
 		"build": "webpack --mode=production",
 		"predev": "npm run build:tailwind",
-		"cz": "git-cz",
+		"cz": "git cz",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
@@ -106,30 +106,26 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/narimanb/windmill-react-ui-tailwindcss-3.git"
+		"url": "https://github.com/narimanb/wreactui.git"
 	},
 	"keywords": [
+		"wreactui",
 		"windmill",
 		"react ui",
 		"tailwindcss 3",
-		"react forms"
+		"react ui components",
+		"react components"
 	],
+	"author": {
+		"name": "Nariman Bortov",
+		"email": "nariman.bortov@gmail.com",
+		"url": "https://github.com/narimanb"
+	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/narimanb/windmill-react-ui-tailwindcss-3/issues"
+		"url": "https://github.com/narimanb/wreactui/issues"
 	},
-	"homepage": "https://github.com/narimanb/windmill-react-ui-tailwindcss-3#readme",
-	"release-it": {
-		"github": {
-			"release": true
-		},
-		"plugins": {
-			"@release-it/conventional-changelog": {
-				"preset": "angular",
-				"infile": "CHANGELOG.md"
-			}
-		}
-	},
+	"homepage": "https://github.com/narimanb/wreactui#readme",
 	"publishConfig": {
 		"access": "public"
 	}

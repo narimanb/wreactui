@@ -5,6 +5,8 @@ import HeartIcon from './static/heart.svg';
 
 const meta: Meta<typeof Button> = {
 	component: Button,
+	title: 'Components/Button',
+	tags: ['autodocs'],
 };
 export default meta;
 

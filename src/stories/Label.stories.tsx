@@ -4,6 +4,8 @@ import Label, { LabelProps } from '../Label';
 
 const meta: Meta<typeof Label> = {
 	component: Label,
+	title: 'Components/Label',
+	tags: ['autodocs'],
 };
 export default meta;
 

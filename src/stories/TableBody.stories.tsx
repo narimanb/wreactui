@@ -4,7 +4,7 @@ import TableBody, { TableBodyProps } from '../TableBody';
 
 const meta: Meta<typeof TableBody> = {
 	component: TableBody,
-	title: 'Table/TableBody',
+	title: 'Components/Table/TableBody',
 	tags: ['autodocs'],
 };
 export default meta;

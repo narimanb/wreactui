@@ -4,6 +4,8 @@ import HelperText, { HelperTextProps } from '../HelperText';
 
 const meta: Meta<typeof HelperText> = {
 	component: HelperText,
+	title: 'Components/HelperText',
+	tags: ['autodocs'],
 };
 export default meta;
 

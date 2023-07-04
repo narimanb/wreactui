@@ -4,6 +4,8 @@ import Pagination, { PaginationProps } from '../Pagination';
 
 const meta: Meta<typeof Pagination> = {
 	component: Pagination,
+	title: 'Components/Pagination',
+	tags: ['autodocs'],
 };
 export default meta;
 

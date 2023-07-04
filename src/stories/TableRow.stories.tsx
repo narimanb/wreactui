@@ -4,7 +4,7 @@ import TableRow, { TableRowProps } from '../TableRow';
 
 const meta: Meta<typeof TableRow> = {
 	component: TableRow,
-	title: 'Table/TableRow',
+	title: 'Components/Table/TableRow',
 	tags: ['autodocs'],
 };
 export default meta;

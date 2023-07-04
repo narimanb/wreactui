@@ -2,16 +2,16 @@ import React, { useContext } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Button from '../Button';
-import Windmill from '../Windmill';
-import { WindmillContext } from '../index';
+import Wreactui from '../Wreactui';
+import { WreactuiContext } from '../index';
 
 function TestButton() {
-	const { toggleMode } = useContext(WindmillContext);
+	const { toggleMode } = useContext(WreactuiContext);
 
 	return <button onClick={toggleMode}>Click</button>;
 }
 
-describe('Windmill Context', () => {
+describe('Wreactui Context', () => {
 	beforeEach(() => {
 		document.documentElement.className = '';
 	});
@@ -20,9 +20,9 @@ describe('Windmill Context', () => {
 		const expected =
 			'inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none';
 		render(
-			<Windmill>
+			<Wreactui>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(screen.getByRole('button').getAttribute('class')).toContain(
@@ -38,9 +38,9 @@ describe('Windmill Context', () => {
 			},
 		};
 		render(
-			<Windmill theme={theme}>
+			<Wreactui theme={theme}>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(screen.getByRole('button').getAttribute('class')).toContain(
@@ -51,9 +51,9 @@ describe('Windmill Context', () => {
 	it('should add light class to html element if usePreferences is present', () => {
 		const expected = 'light';
 		render(
-			<Windmill usePreferences>
+			<Wreactui usePreferences>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(document.documentElement.getAttribute('class')).toBe(expected);
@@ -62,9 +62,9 @@ describe('Windmill Context', () => {
 	it('should not add any class to html element if usePreferences is ausent', () => {
 		const expected = '';
 		render(
-			<Windmill>
+			<Wreactui>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(document.documentElement.getAttribute('class')).toBe(expected);
@@ -73,9 +73,9 @@ describe('Windmill Context', () => {
 	it('should execute the toggleTheme method', async () => {
 		const expected = 'dark';
 		render(
-			<Windmill usePreferences>
+			<Wreactui usePreferences>
 				<TestButton />
-			</Windmill>
+			</Wreactui>
 		);
 
 		const user = userEvent.setup();
@@ -97,9 +97,9 @@ describe('Windmill Context', () => {
 
 		const expected = 'dark';
 		render(
-			<Windmill usePreferences>
+			<Wreactui usePreferences>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(document.documentElement.getAttribute('class')).toBe(expected);
@@ -108,9 +108,9 @@ describe('Windmill Context', () => {
 	it('should add dark theme class to html element', () => {
 		const expected = 'dark';
 		render(
-			<Windmill dark>
+			<Wreactui dark>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(document.documentElement.getAttribute('class')).toBe(expected);
@@ -119,9 +119,9 @@ describe('Windmill Context', () => {
 	it('should add dark theme class to html element when usePreferences is enabled', () => {
 		const expected = 'dark';
 		render(
-			<Windmill dark usePreferences>
+			<Wreactui dark usePreferences>
 				<Button />
-			</Windmill>
+			</Wreactui>
 		);
 
 		expect(document.documentElement.getAttribute('class')).toBe(expected);

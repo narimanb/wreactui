@@ -4,7 +4,7 @@ import TableFooter, { TableFooterProps } from '../TableFooter';
 
 const meta: Meta<typeof TableFooter> = {
 	component: TableFooter,
-	title: 'Table/TableFooter',
+	title: 'Components/Table/TableFooter',
 	tags: ['autodocs'],
 };
 export default meta;
