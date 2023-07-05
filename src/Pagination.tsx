@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Button, { ButtonAsButtonProps } from './Button';
 import { ThemeContext } from './context/ThemeContext';
 
-const PrevIcon: React.FC = function PrevIcon(props) {
+const PrevIcon: React.FC = (props) => {
 	return (
 		<svg {...props} aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
 			<path
@@ -14,7 +14,7 @@ const PrevIcon: React.FC = function PrevIcon(props) {
 	);
 };
 
-const NextIcon: React.FC = function NextIcon(props) {
+const NextIcon: React.FC = (props) => {
 	return (
 		<svg {...props} aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
 			<path
@@ -84,12 +84,22 @@ export interface PaginationProps {
 	totalResults: number;
 	/**
 	 * The number of results shown per page
+	 * @default 10
 	 */
 	resultsPerPage?: number;
 	/**
-	 * The accessible name of the pagination (what does it refer to?)
+	 * The accessible name of the pagination
+	 * @default Navigation
+	 * @link https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role
 	 */
-	label: string;
+	ariaLabel?: string;
+	/**
+	 * Show the summary
+	 * @default true
+	 * @example
+	 * 'SHOWING 1-10 OF 120'
+	 */
+	showSummary?: boolean;
 	/**
 	 * The function executed on page change
 	 */
@@ -106,7 +116,8 @@ const Pagination = React.forwardRef<Ref, PaginationProps>(function Pagination(
 	const {
 		totalResults,
 		resultsPerPage = 10,
-		label,
+		ariaLabel = 'Navigation',
+		showSummary = true,
 		onChange,
 		...other
 	} = props;
@@ -184,16 +195,18 @@ const Pagination = React.forwardRef<Ref, PaginationProps>(function Pagination(
 
 	return (
 		<div className={baseStyle} ref={ref} {...other}>
-			{/*
-			 * This (label) should probably be an option, and not the default
-			 */}
 			<span className="flex items-center font-semibold tracking-wide uppercase">
-				Showing {activePage * resultsPerPage - resultsPerPage + 1}-
-				{Math.min(activePage * resultsPerPage, totalResults)} of {totalResults}
+				{showSummary && (
+					<>
+						Showing {activePage * resultsPerPage - resultsPerPage + 1}-
+						{Math.min(activePage * resultsPerPage, totalResults)} of{' '}
+						{totalResults}
+					</>
+				)}
 			</span>
 
 			<div className="flex mt-2 sm:mt-auto sm:justify-end">
-				<nav aria-label={label}>
+				<nav aria-label={ariaLabel}>
 					<ul className="inline-flex items-center">
 						<li>
 							<NavigationButton
