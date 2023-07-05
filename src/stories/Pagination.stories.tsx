@@ -22,3 +22,12 @@ export const Basic = {
 		resultsPerPage: 10,
 	},
 };
+
+export const WithoutSummary = {
+	...Template,
+	parameters: {
+		showSummary: false,
+		totalResults: 10,
+		resultsPerPage: 10,
+	},
+};
