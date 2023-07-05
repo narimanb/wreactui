@@ -1,4 +1,5 @@
-![image](https://github.com/narimanb/wreactui/assets/37624015/888b81a4-0bb5-49d4-9a25-6720d553d720)
+![image](https://github.com/narimanb/wreactui/assets/37624015/9d899ace-b096-4dc5-b272-d707a5dbdfa1)
+
 
 The React UI component library based on Tailwind CSS V3 for fast and accessible development of gorgeous interfaces.
 
